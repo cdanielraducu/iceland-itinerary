@@ -1,0 +1,171 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Iceland Ring Road Itinerary - September 2025" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gradient-to-br from-slate-50 to-blue-50 text-slate-900 font-sans antialiased">
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-slate-200/50 z-50 shadow-sm">
+      <div class="max-w-6xl mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+          <a href="/" class="font-bold text-xl text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text flex items-center space-x-2">
+            <span class="text-2xl">🇮🇸</span>
+            <span>Iceland Adventure</span>
+          </a>
+          <div class="hidden sm:flex space-x-8 text-sm font-medium">
+            <a href="#itinerary" class="text-slate-600 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">Itinerary</a>
+            <a href="#maps" class="text-slate-600 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">Maps</a>
+            <a href="#info" class="text-slate-600 hover:text-blue-600 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">Info</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <main class="pt-20">
+      <slot />
+    </main>
+
+    <footer class="bg-gradient-to-r from-slate-900 to-slate-800 text-slate-300 py-16 mt-20">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center">
+          <div class="mb-8">
+            <h3 class="text-2xl font-bold text-white mb-4 font-display">🇮🇸 Iceland Adventure</h3>
+            <p class="text-slate-400 max-w-2xl mx-auto">
+              An unforgettable Ring Road journey through Iceland's most spectacular landscapes, 
+              carefully planned with insider knowledge and tested routes.
+            </p>
+          </div>
+          <div class="border-t border-slate-700 pt-8">
+            <p class="text-sm text-slate-400">
+              Iceland Ring Road Adventure • September 9-16, 2025 • Made with ❤️ and 
+              <a href="https://astro.build" class="text-blue-400 hover:text-blue-300 transition-colors">Astro</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+  }
+  
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .day-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+  }
+  
+  .hero-bg {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.9), rgba(59, 130, 246, 0.9)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .location-image {
+    transition: transform 0.3s ease;
+  }
+  
+  .location-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .activity-tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .waterfall { @apply bg-blue-100 text-blue-700; }
+  .geothermal { @apply bg-orange-100 text-orange-700; }
+  .crater { @apply bg-red-100 text-red-700; }
+  .hiking { @apply bg-green-100 text-green-700; }
+  .camping { @apply bg-purple-100 text-purple-700; }
+  .glacier { @apply bg-cyan-100 text-cyan-700; }
+  .mountain { @apply bg-gray-100 text-gray-700; }
+  .canyon { @apply bg-yellow-100 text-yellow-700; }
+  .hot_spring { @apply bg-pink-100 text-pink-700; }
+  .shopping { @apply bg-indigo-100 text-indigo-700; }
+  .city { @apply bg-slate-100 text-slate-700; }
+  .beach { @apply bg-teal-100 text-teal-700; }
+  .lighthouse { @apply bg-amber-100 text-amber-700; }
+  .bridge { @apply bg-emerald-100 text-emerald-700; }
+  .departure { @apply bg-gray-100 text-gray-700; }
+  .highlands { @apply bg-violet-100 text-violet-700; }
+  .lake { @apply bg-blue-100 text-blue-700; }
+  .cave { @apply bg-stone-100 text-stone-700; }
+  .rock_formation { @apply bg-slate-100 text-slate-700; }
+  .town { @apply bg-green-100 text-green-700; }
+  .landmark { @apply bg-red-100 text-red-700; }
+  
+  .schedule-item {
+    @apply relative pl-8 pb-6 border-l-2 border-gray-200 last:border-l-0 last:pb-0;
+  }
+  
+  .schedule-item::before {
+    content: '';
+    @apply absolute left-[-5px] top-2 w-2 h-2 bg-blue-600 rounded-full;
+  }
+  
+  .map-embed {
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+</style>

@@ -1,0 +1,136 @@
+{
+  "attractions": {
+    "Gullfoss": {
+      "name": "Gullfoss",
+      "type": "waterfall",
+      "description": "The Golden Falls - Iceland's most famous two-tiered waterfall with thunderous power and rainbows on sunny days.",
+      "tips": [
+        "Best photos from upper viewing platform",
+        "Wear waterproof clothing - gets very misty",
+        "Visit during golden hour for magical lighting"
+      ],
+      "image": "https://images.unsplash.com/photo-1539593395743-7da5ee10ff07?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+    },
+    "Geysir": {
+      "name": "Geysir",
+      "type": "geothermal", 
+      "description": "Historic geothermal area with Strokkur geyser erupting every 5-10 minutes up to 20 meters high.",
+      "tips": [
+        "Strokkur is more active than the original Geysir",
+        "Stand upwind to avoid sulfur smell",
+        "Wait for multiple eruptions for best photos"
+      ],
+      "image": "https://images.unsplash.com/photo-1561979321-dcad5fa8b4bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+    },
+    "Bruarfoss": {
+      "name": "Bruarfoss",
+      "type": "waterfall",
+      "description": "Hidden gem waterfall with stunning blue water cascading over dark rocks. Requires short hike to reach.",
+      "tips": [
+        "2km hike from parking area",
+        "Follow the river upstream",
+        "Most beautiful waterfall in Iceland according to many"
+      ],
+      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+    },
+    "Kerið": {
+      "name": "Kerið Crater",
+      "type": "crater",
+      "description": "Volcanic crater lake with striking red and orange crater walls surrounding a deep blue-green lake.",
+      "tips": [
+        "Entry fee required (400 ISK)",
+        "Walk around the rim for different viewpoints",
+        "Beautiful at sunset with golden lighting"
+      ],
+      "image": "https://images.unsplash.com/photo-1578926375811-8800e33e3ace?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+    },
+    "Reykjadalur": {
+      "name": "Reykjadalur Hot Springs",
+      "type": "hot_spring",
+      "description": "Natural geothermal river where you can bathe in warm waters after a scenic 3km hike through steaming valley.",
+      "tips": [
+        "Bring swimwear and towel",
+        "3km hike each way (1.5 hours total)",
+        "Water temperature varies along the river"
+      ],
+      "image": "https://images.unsplash.com/photo-1578679625853-52c4c8cf90bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+    },
+    "Landmannalaugar": {
+      "name": "Landmannalaugar",
+      "type": "highlands",
+      "description": "Stunning highland destination famous for colorful rhyolite mountains, natural hot springs, and dramatic landscapes.",
+      "tips": [
+        "4x4 vehicle required for F208 road",
+        "Parking reservation needed (9AM-4PM)",
+        "Bring layers - weather changes quickly"
+      ],
+      "image": "https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+    },
+    "Jökulsárlón": {
+      "name": "Jökulsárlón",
+      "type": "glacier",
+      "description": "Spectacular glacier lagoon filled with floating icebergs calving from Breiðamerkurjökull glacier.",
+      "tips": [
+        "Free to visit and explore",
+        "Boat tours available for closer iceberg experience", 
+        "Best light for photography in early morning/evening"
+      ],
+      "image": "https://images.unsplash.com/photo-1578911373434-0cb395d2cbfb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+    },
+    "Diamond Beach": {
+      "name": "Diamond Beach",
+      "type": "beach",
+      "description": "Black volcanic sand beach where crystal-clear icebergs from Jökulsárlón wash ashore like scattered diamonds.",
+      "tips": [
+        "Never turn your back on the waves",
+        "Icebergs constantly changing position",
+        "Perfect for dramatic photography"
+      ],
+      "image": "https://images.unsplash.com/photo-1578911373434-0cb395d2cbfb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+    },
+    "Svartifoss": {
+      "name": "Svartifoss",
+      "type": "waterfall",
+      "description": "Unique waterfall surrounded by dark basalt columns that inspired Reykjavik's Hallgrímskirkja church design.",
+      "tips": [
+        "1.5km hike from Skaftafell visitor center",
+        "Well-marked trail but can be icy",
+        "Great geological formations to photograph"
+      ],
+      "image": "https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+    },
+    "Kirkjufellsfoss": {
+      "name": "Kirkjufellsfoss", 
+      "type": "waterfall",
+      "description": "Picturesque waterfall with iconic Kirkjufell mountain backdrop - one of the most photographed locations in Iceland.",
+      "tips": [
+        "Perfect for Northern Lights photography",
+        "Multiple viewpoints along the path",
+        "Popular sunrise/sunset location"
+      ],
+      "image": "https://images.unsplash.com/photo-1578910715199-c3e67b41e943?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+    },
+    "Dettifoss": {
+      "name": "Dettifoss",
+      "type": "waterfall", 
+      "description": "Europe's most powerful waterfall by volume, with 500 cubic meters of water per second thundering over 45m cliff.",
+      "tips": [
+        "Accessible from both east and west sides",
+        "West side (862) has better views but rougher road",
+        "Extremely loud - you'll feel the power"
+      ],
+      "image": "https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+    },
+    "Blue Lagoon": {
+      "name": "Blue Lagoon",
+      "type": "hot_spring",
+      "description": "Famous geothermal spa with milky blue waters rich in silica and minerals, offering luxury wellness experience.",
+      "tips": [
+        "Advance booking essential",
+        "Expensive but iconic experience",
+        "Free silica mud mask included"
+      ],
+      "image": "https://images.unsplash.com/photo-1578679625853-52c4c8cf90bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+    }
+  }
+}

@@ -1,0 +1,220 @@
+---
+import LocationCard from './LocationCard.astro';
+import locationsData from '../data/locations.json';
+
+export interface Props {
+  day: {
+    day: number;
+    date: string;
+    title: string;
+    route: string;
+    distance: string;
+    highlights: string[];
+    camping: string;
+    description: string;
+    schedule: Array<{
+      time: string;
+      activity: string;
+      type?: string;
+    }>;
+  };
+}
+
+const { day } = Astro.props;
+
+const getActivityIcon = (type: string) => {
+  const icons = {
+    waterfall: '💧',
+    geothermal: '♨️',
+    crater: '🌋',
+    hiking: '🥾',
+    camping: '⛺',
+    glacier: '🧊',
+    mountain: '🏔️',
+    canyon: '🏞️',
+    hot_spring: '♨️',
+    shopping: '🛍️',
+    city: '🏛️',
+    beach: '🏖️',
+    lighthouse: '💡',
+    bridge: '🌉',
+    departure: '✈️',
+    highlands: '🏔️',
+    lake: '🏞️',
+    cave: '🕳️',
+    rock_formation: '🗿',
+    town: '🏘️',
+    landmark: '📍'
+  };
+  return icons[type as keyof typeof icons] || '📍';
+};
+
+const getDayImage = (dayNum: number) => {
+  // Verified authentic images for each day's primary locations
+  const images = {
+    1: 'https://images.unsplash.com/photo-1539593395743-7da5ee10ff07?w=1200&h=800&fit=crop&q=95&auto=format&fm=webp', // Day 1: Golden Circle - Gullfoss
+    2: 'https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=1200&h=800&fit=crop&q=95&auto=format&fm=webp', // Day 2: Landmannalaugar colorful mountains
+    3: 'https://images.unsplash.com/photo-1578911373434-0cb395d2cbfb?w=1200&h=800&fit=crop&q=95&auto=format&fm=webp', // Day 3: Jökulsárlón glacier lagoon
+    4: 'https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=1200&h=800&fit=crop&q=95&auto=format&fm=webp', // Day 4: East fjords waterfalls
+    5: 'https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=1200&h=800&fit=crop&q=95&auto=format&fm=webp', // Day 5: Dettifoss waterfall
+    6: 'https://images.unsplash.com/photo-1561979321-dcad5fa8b4bb?w=1200&h=800&fit=crop&q=95&auto=format&fm=webp', // Day 6: Mývatn geothermal
+    7: 'https://images.unsplash.com/photo-1578910715199-c3e67b41e943?w=1200&h=800&fit=crop&q=95&auto=format&fm=webp', // Day 7: Kirkjufellsfoss
+    8: 'https://images.unsplash.com/photo-1578679625853-52c4c8cf90bb?w=1200&h=800&fit=crop&q=95&auto=format&fm=webp' // Day 8: Blue Lagoon
+  };
+  return images[dayNum as keyof typeof images] || images[1];
+};
+
+const getDayColor = (dayNum: number) => {
+  const colors = {
+    1: 'from-blue-600 to-purple-600',
+    2: 'from-orange-500 to-red-600',
+    3: 'from-cyan-500 to-blue-600',
+    4: 'from-green-500 to-teal-600',
+    5: 'from-purple-500 to-pink-600',
+    6: 'from-yellow-500 to-orange-600',
+    7: 'from-indigo-500 to-purple-600',
+    8: 'from-teal-500 to-green-600'
+  };
+  return colors[dayNum as keyof typeof colors] || colors[1];
+};
+---
+
+<!-- Modern Travel Blog Card Design -->
+<article class="group mb-12 md:mb-16 bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-slate-100">
+  <!-- Hero Image Section -->
+  <div class="relative h-64 md:h-80 overflow-hidden">
+    <img 
+      src={getDayImage(day.day)} 
+      alt={`Day ${day.day} - ${day.title}`}
+      class="w-full h-full object-cover location-image group-hover:scale-105 transition-transform duration-700"
+    />
+    
+    <!-- Gradient Overlay -->
+    <div class={`absolute inset-0 bg-gradient-to-t ${getDayColor(day.day)} opacity-80`}></div>
+    
+    <!-- Day Header Content -->
+    <div class="absolute inset-0 flex flex-col justify-end p-8 text-white">
+      <div class="flex items-end justify-between">
+        <div>
+          <div class="flex items-center space-x-3 mb-3">
+            <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
+              Day {day.day}
+            </span>
+            <span class="text-sm opacity-90">{day.date}</span>
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold mb-2 leading-tight font-display">{day.title}</h2>
+          <p class="text-xl opacity-90 mb-4">{day.description}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Section -->
+  <div class="p-6 md:p-8">
+    <!-- Route Info Cards -->
+    <div class="grid md:grid-cols-2 gap-4 md:gap-6 mb-8">
+      <div class="bg-gradient-to-r from-slate-50 to-slate-100 rounded-xl p-4 md:p-6 border border-slate-200 hover:shadow-md transition-shadow">
+        <h4 class="font-semibold text-slate-800 mb-2 flex items-center">
+          <span class="text-xl md:text-2xl mr-3">🛣️</span>
+          Route
+        </h4>
+        <p class="text-slate-600 text-sm md:text-base">{day.route}</p>
+      </div>
+      <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 md:p-6 border border-blue-200 hover:shadow-md transition-shadow">
+        <h4 class="font-semibold text-slate-800 mb-2 flex items-center">
+          <span class="text-xl md:text-2xl mr-3">📏</span>
+          Distance
+        </h4>
+        <p class="text-slate-600 text-sm md:text-base">{day.distance}</p>
+      </div>
+    </div>
+
+    <!-- Featured Locations Grid -->
+    <div class="mb-8">
+      <h4 class="text-xl md:text-2xl font-bold text-slate-800 mb-6 flex items-center">
+        <span class="text-2xl md:text-3xl mr-3">🏞️</span>
+        Featured Locations
+      </h4>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {day.highlights.slice(0, 6).map(highlight => {
+          const locationData = locationsData.attractions[highlight as keyof typeof locationsData.attractions];
+          if (locationData) {
+            const scheduleItem = day.schedule.find(item => item.activity.toLowerCase().includes(highlight.toLowerCase()));
+            return (
+              <LocationCard 
+                location={{
+                  name: locationData.name,
+                  type: locationData.type,
+                  time: scheduleItem?.time,
+                  description: locationData.description,
+                  tips: locationData.tips,
+                  image: locationData.image
+                }} 
+              />
+            );
+          }
+          return null;
+        }).filter(Boolean)}
+      </div>
+      
+      <!-- Additional Highlights (for locations not in detailed data) -->
+      {day.highlights.filter(highlight => !locationsData.attractions[highlight as keyof typeof locationsData.attractions]).length > 0 && (
+        <div class="mt-6">
+          <h5 class="text-lg font-semibold text-slate-700 mb-4">Also Visiting:</h5>
+          <div class="flex flex-wrap gap-3">
+            {day.highlights.filter(highlight => !locationsData.attractions[highlight as keyof typeof locationsData.attractions]).map(highlight => (
+              <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl px-4 py-3 text-center hover:from-blue-100 hover:to-indigo-100 transition-colors duration-300">
+                <span class="text-blue-700 font-medium text-sm">{highlight}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+
+    <!-- Timeline Schedule -->
+    <div class="mb-8">
+      <h4 class="text-xl md:text-2xl font-bold text-slate-800 mb-6 flex items-center">
+        <span class="text-2xl md:text-3xl mr-3">⏰</span>
+        Daily Timeline
+      </h4>
+      <div class="space-y-4">
+        {day.schedule.map((item, index) => (
+          <div class="schedule-item group/item bg-slate-50 rounded-xl p-4 hover:bg-slate-100 transition-colors">
+            <div class="flex items-start space-x-3 md:space-x-4">
+              <div class="flex-shrink-0 bg-white rounded-xl shadow-sm p-2 md:p-3 group-hover/item:shadow-md transition-shadow">
+                <span class="text-lg md:text-2xl">{item.type ? getActivityIcon(item.type) : '📍'}</span>
+              </div>
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-center gap-2 md:gap-3 mb-2">
+                  <span class="bg-slate-900 text-white px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-mono text-xs md:text-sm font-bold">
+                    {item.time}
+                  </span>
+                  {item.type && (
+                    <span class="bg-blue-100 text-blue-800 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium capitalize">
+                      {item.type.replace('_', ' ')}
+                    </span>
+                  )}
+                </div>
+                <p class="text-slate-700 text-sm md:text-lg leading-relaxed">{item.activity}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Camping Info -->
+    <div class="bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 rounded-2xl p-4 md:p-6 hover:shadow-lg transition-shadow">
+      <div class="flex items-start space-x-3 md:space-x-4">
+        <div class="bg-emerald-100 rounded-xl p-2 md:p-3">
+          <span class="text-2xl md:text-3xl">⛺</span>
+        </div>
+        <div>
+          <h4 class="text-lg md:text-xl font-bold text-emerald-800 mb-2">Tonight's Accommodation</h4>
+          <p class="text-emerald-700 text-sm md:text-lg">{day.camping}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

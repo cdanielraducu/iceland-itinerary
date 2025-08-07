@@ -1,0 +1,132 @@
+---
+export interface Props {
+  location: {
+    name: string;
+    type: string;
+    time?: string;
+    description?: string;
+    image?: string;
+    tips?: string[];
+  };
+}
+
+const { location } = Astro.props;
+
+const getLocationIcon = (type: string) => {
+  const icons = {
+    waterfall: '💧',
+    geothermal: '♨️',
+    crater: '🌋',
+    hiking: '🥾',
+    camping: '⛺',
+    glacier: '🧊',
+    mountain: '🏔️',
+    canyon: '🏞️',
+    hot_spring: '♨️',
+    shopping: '🛍️',
+    city: '🏛️',
+    beach: '🏖️',
+    lighthouse: '💡',
+    bridge: '🌉',
+    departure: '✈️',
+    highlands: '🏔️',
+    lake: '🏞️',
+    cave: '🕳️',
+    rock_formation: '🗿',
+    town: '🏘️',
+    landmark: '📍'
+  };
+  return icons[type as keyof typeof icons] || '📍';
+};
+
+const getLocationImage = (name: string) => {
+  // Verified authentic Iceland location images
+  const imageMap: Record<string, string> = {
+    'Gullfoss': 'https://images.unsplash.com/photo-1539593395743-7da5ee10ff07?w=800&h=600&fit=crop&q=95&auto=format&fm=webp', // Actual Gullfoss waterfall
+    'Geysir': 'https://images.unsplash.com/photo-1561979321-dcad5fa8b4bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp', // Strokkur geyser eruption
+    'Bruarfoss': 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&q=95&auto=format&fm=webp', // Blue Bruarfoss waterfall
+    'Kerið': 'https://images.unsplash.com/photo-1578926375811-8800e33e3ace?w=800&h=600&fit=crop&q=95&auto=format&fm=webp', // Kerið crater lake
+    'Kerið Crater': 'https://images.unsplash.com/photo-1578926375811-8800e33e3ace?w=800&h=600&fit=crop&q=95&auto=format&fm=webp', // Kerið crater lake
+    'Reykjadalur': 'https://images.unsplash.com/photo-1578679625853-52c4c8cf90bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp', // Reykjadalur hot springs valley
+    'Reykjadalur Hot Springs': 'https://images.unsplash.com/photo-1578679625853-52c4c8cf90bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp',
+    'Landmannalaugar': 'https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800&h=600&fit=crop&q=95&auto=format&fm=webp', // Landmannalaugar colorful mountains
+    'Jökulsárlón': 'https://images.unsplash.com/photo-1578911373434-0cb395d2cbfb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp', // Jökulsárlón glacier lagoon
+    'Diamond Beach': 'https://images.unsplash.com/photo-1578911373434-0cb395d2cbfb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp', // Diamond Beach icebergs
+    'Svartifoss': 'https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp', // Svartifoss basalt columns
+    'Kirkjufellsfoss': 'https://images.unsplash.com/photo-1578910715199-c3e67b41e943?w=800&h=600&fit=crop&q=95&auto=format&fm=webp', // Kirkjufellsfoss with mountain
+    'Dettifoss': 'https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp', // Dettifoss powerful waterfall
+    'Blue Lagoon': 'https://images.unsplash.com/photo-1578679625853-52c4c8cf90bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp' // Blue Lagoon geothermal spa
+  };
+  
+  return location.image || imageMap[name] || 'https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800&h=600&fit=crop&q=95&auto=format&fm=webp';
+};
+---
+
+<div class="group relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden border border-slate-100 hover:border-slate-200 hover:scale-105">
+  <!-- Image Section -->
+  <div class="relative h-40 md:h-48 overflow-hidden">
+    <img 
+      src={getLocationImage(location.name)} 
+      alt={location.name}
+      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+    />
+    
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+    
+    <!-- Location Type Badge -->
+    <div class="absolute top-3 left-3">
+      <span class="inline-flex items-center space-x-1.5 bg-white/25 backdrop-blur-sm px-2.5 py-1.5 rounded-full text-white text-xs md:text-sm font-medium border border-white/10">
+        <span class="text-sm md:text-lg">{getLocationIcon(location.type)}</span>
+        <span class="capitalize hidden sm:inline">{location.type.replace('_', ' ')}</span>
+      </span>
+    </div>
+    
+    <!-- Time Badge -->
+    {location.time && (
+      <div class="absolute top-3 right-3">
+        <span class="bg-slate-900/90 backdrop-blur-sm text-white px-2.5 py-1.5 rounded-lg text-xs md:text-sm font-mono font-bold">
+          {location.time}
+        </span>
+      </div>
+    )}
+    
+    <!-- Location Name -->
+    <div class="absolute bottom-3 left-3 right-3">
+      <h3 class="text-lg md:text-xl font-bold text-white mb-1 md:mb-2 leading-tight">{location.name}</h3>
+      {location.description && (
+        <p class="text-white/90 text-xs md:text-sm leading-relaxed line-clamp-2">{location.description}</p>
+      )}
+    </div>
+  </div>
+  
+  <!-- Tips Section (if available) -->
+  {location.tips && location.tips.length > 0 && (
+    <div class="p-3 md:p-4">
+      <div class="space-y-1.5">
+        {location.tips.slice(0, 2).map(tip => (
+          <div class="flex items-start space-x-2 text-xs md:text-sm text-slate-600">
+            <span class="text-blue-500 font-bold mt-0.5">•</span>
+            <span class="line-clamp-1">{tip}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+</div>
+
+<style>
+  .line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

@@ -1,0 +1,169 @@
+{
+  "title": "Iceland Ring Road Adventure",
+  "subtitle": "September 9-16, 2025 • 4x4 Rooftop Tent Journey",
+  "description": "An 8-day Iceland Ring Road adventure with highlands experience, following proven routes and local recommendations.",
+  "days": [
+    {
+      "day": 1,
+      "date": "Monday, September 9",
+      "title": "Golden Circle & Thingvellir",
+      "route": "Keflavik → Golden Circle → Thingvellir",
+      "distance": "150km, 3 hours driving",
+      "highlights": ["Gullfoss", "Geysir", "Bruarfoss", "Kerið", "Reykjadalur"],
+      "camping": "Thingvellir Campsite",
+      "description": "Start your Iceland adventure with the famous Golden Circle, including hidden gems like Bruarfoss waterfall.",
+      "schedule": [
+        {"time": "09:30", "activity": "Arrive Keflavik, pick up 4x4"},
+        {"time": "11:00", "activity": "Bonus shopping in Reykjavik", "type": "shopping"},
+        {"time": "13:00", "activity": "Quick Reykjavik sightseeing", "type": "city"},
+        {"time": "15:30", "activity": "Gullfoss waterfall", "type": "waterfall"},
+        {"time": "17:30", "activity": "Geysir geothermal area", "type": "geothermal"},
+        {"time": "18:30", "activity": "Bruarfoss hidden waterfall", "type": "waterfall"},
+        {"time": "19:15", "activity": "Kerið crater lake", "type": "crater"},
+        {"time": "20:00", "activity": "Reykjadalur hot springs hike", "type": "hiking"},
+        {"time": "22:00", "activity": "Setup camp at Thingvellir", "type": "camping"}
+      ]
+    },
+    {
+      "day": 2,
+      "date": "Tuesday, September 10",
+      "title": "Highlands Adventure",
+      "route": "Thingvellir → Landmannalaugar → South Coast",
+      "distance": "280km, 5.5 hours + F-road time",
+      "highlights": ["Landmannalaugar", "Colorful mountains", "Natural hot springs", "F208"],
+      "camping": "Kirkjubæjarklaustur Campsite",
+      "description": "Experience the incredible highlands at Landmannalaugar with its colorful rhyolite mountains and natural hot springs.",
+      "schedule": [
+        {"time": "07:00", "activity": "Pack up camp"},
+        {"time": "08:00", "activity": "Drive to F208 entrance"},
+        {"time": "09:30", "activity": "Landmannalaugar highlands exploration", "type": "highlands"},
+        {"time": "14:00", "activity": "Lunch at Landmannalaugar"},
+        {"time": "15:00", "activity": "Drive via F208 south"},
+        {"time": "18:30", "activity": "Fjaðrárgljúfur Canyon", "type": "canyon"},
+        {"time": "20:00", "activity": "Setup camp", "type": "camping"}
+      ]
+    },
+    {
+      "day": 3,
+      "date": "Wednesday, September 11",
+      "title": "Glaciers & Diamonds",
+      "route": "Kirkjubæjarklaustur → Höfn",
+      "distance": "200km, 3.5 hours driving",
+      "highlights": ["Svartifoss", "Jökulsárlón", "Diamond Beach", "Hoffell Hot Tubs"],
+      "camping": "Höfn Campsite",
+      "description": "Witness the power of glaciers at Jökulsárlón and relax in the famous Hoffell hot tubs.",
+      "schedule": [
+        {"time": "08:00", "activity": "Pack up, drive to Skaftafell"},
+        {"time": "09:30", "activity": "Svartifoss waterfall hike", "type": "hiking"},
+        {"time": "11:30", "activity": "Buffer time"},
+        {"time": "13:30", "activity": "Drive to Jökulsárlón"},
+        {"time": "15:00", "activity": "Jökulsárlón Glacier Lagoon", "type": "glacier"},
+        {"time": "15:30", "activity": "Diamond Beach photography", "type": "beach"},
+        {"time": "17:30", "activity": "Hoffell Hot Tubs", "type": "hot_spring"},
+        {"time": "19:30", "activity": "Setup camp in Höfn", "type": "camping"}
+      ]
+    },
+    {
+      "day": 4,
+      "date": "Thursday, September 12",
+      "title": "East Fjords Journey",
+      "route": "Höfn → Egilsstaðir",
+      "distance": "260km, 4.5 hours driving",
+      "highlights": ["Stokksnes", "Vestrahorn", "Hengifoss"],
+      "camping": "Egilsstaðir Campsite",
+      "description": "Explore the dramatic East Fjords with Vestrahorn mountain and the beautiful Hengifoss waterfall.",
+      "schedule": [
+        {"time": "08:00", "activity": "Pack up camp"},
+        {"time": "09:00", "activity": "Drive to Stokksnes"},
+        {"time": "10:00", "activity": "Stokksnes & Vestrahorn", "type": "mountain"},
+        {"time": "12:00", "activity": "Lunch break + drive"},
+        {"time": "16:00", "activity": "Hengifoss waterfall hike", "type": "waterfall"},
+        {"time": "18:00", "activity": "Drive to Egilsstaðir"},
+        {"time": "19:30", "activity": "Setup camp", "type": "camping"}
+      ]
+    },
+    {
+      "day": 5,
+      "date": "Friday, September 13",
+      "title": "North Iceland Wonders",
+      "route": "Egilsstaðir → Akureyri",
+      "distance": "270km, 4 hours driving",
+      "highlights": ["Dettifoss", "Ásbyrgi Canyon", "Húsavík"],
+      "camping": "Hamrar Campsite, Akureyri",
+      "description": "Experience Europe's most powerful waterfall and the horseshoe-shaped Ásbyrgi canyon.",
+      "schedule": [
+        {"time": "08:00", "activity": "Pack up camp"},
+        {"time": "09:00", "activity": "Drive to Dettifoss"},
+        {"time": "10:30", "activity": "Dettifoss waterfall", "type": "waterfall"},
+        {"time": "13:00", "activity": "Ásbyrgi Canyon", "type": "canyon"},
+        {"time": "15:00", "activity": "Drive to Húsavík"},
+        {"time": "16:30", "activity": "Húsavík whale watching town", "type": "town"},
+        {"time": "18:00", "activity": "Drive to Akureyri"},
+        {"time": "19:30", "activity": "Setup camp", "type": "camping"}
+      ]
+    },
+    {
+      "day": 6,
+      "date": "Saturday, September 14",
+      "title": "Mývatn & Western Journey",
+      "route": "Akureyri → Borgarnes",
+      "distance": "300km, 4.5 hours driving",
+      "highlights": ["Goðafoss", "Lake Mývatn", "Grjótagjá", "Hverir", "Hvítserkur"],
+      "camping": "Borgarnes Campsite",
+      "description": "Explore the geothermal wonders of Mývatn and the famous sea stack Hvítserkur.",
+      "schedule": [
+        {"time": "08:00", "activity": "Pack up camp"},
+        {"time": "08:30", "activity": "Goðafoss waterfall", "type": "waterfall"},
+        {"time": "09:30", "activity": "Drive to Mývatn"},
+        {"time": "10:30", "activity": "Lake Mývatn exploration", "type": "lake"},
+        {"time": "11:00", "activity": "Grjótagjá cave", "type": "cave"},
+        {"time": "12:00", "activity": "Hverir geothermal field", "type": "geothermal"},
+        {"time": "13:30", "activity": "Mývatn Nature Baths", "type": "hot_spring"},
+        {"time": "15:00", "activity": "Drive west"},
+        {"time": "18:00", "activity": "Hvítserkur rock formation", "type": "rock_formation"},
+        {"time": "19:30", "activity": "Setup camp", "type": "camping"}
+      ]
+    },
+    {
+      "day": 7,
+      "date": "Sunday, September 15",
+      "title": "Snæfellsnes Magic",
+      "route": "Borgarnes → Snæfellsnes → Grindavík",
+      "distance": "280km, 5 hours driving",
+      "highlights": ["Kirkjufellsfoss", "Saxhóll Crater", "KIDKA Wool Factory", "Hraunfossar"],
+      "camping": "Grindavík Campsite",
+      "description": "Experience the magic of Snæfellsnes Peninsula and shop for authentic Icelandic wool.",
+      "schedule": [
+        {"time": "08:00", "activity": "Pack up camp"},
+        {"time": "08:30", "activity": "Drive to Snæfellsnes"},
+        {"time": "10:00", "activity": "Kirkjufellsfoss waterfall", "type": "waterfall"},
+        {"time": "11:30", "activity": "Saxhóll Crater (must-see!)", "type": "crater"},
+        {"time": "12:30", "activity": "Lunch break"},
+        {"time": "13:30", "activity": "Djúpalónssandur beach", "type": "beach"},
+        {"time": "14:30", "activity": "Lóndrangar basalt pillars", "type": "rock_formation"},
+        {"time": "15:30", "activity": "KIDKA Wool Factory shopping", "type": "shopping"},
+        {"time": "16:30", "activity": "Hraunfossar waterfalls", "type": "waterfall"},
+        {"time": "17:45", "activity": "Drive to Reykjanes"},
+        {"time": "20:00", "activity": "Setup camp near airport", "type": "camping"}
+      ]
+    },
+    {
+      "day": 8,
+      "date": "Monday, September 16",
+      "title": "Farewell Iceland",
+      "route": "Reykjanes Peninsula → Keflavik Airport",
+      "distance": "50km, 1 hour",
+      "highlights": ["Blue Lagoon", "Bridge Between Continents", "Reykjanestá"],
+      "camping": "Departure Day",
+      "description": "Final morning exploring the unique Reykjanes Peninsula before departure.",
+      "schedule": [
+        {"time": "07:00", "activity": "Pack up camp"},
+        {"time": "08:00", "activity": "Blue Lagoon (optional)", "type": "hot_spring"},
+        {"time": "09:30", "activity": "Bridge Between Continents", "type": "landmark"},
+        {"time": "10:00", "activity": "Gunnuhver hot springs", "type": "geothermal"},
+        {"time": "10:30", "activity": "Reykjanestá lighthouse", "type": "lighthouse"},
+        {"time": "11:00", "activity": "Return 4x4, airport procedures", "type": "departure"}
+      ]
+    }
+  ]
+}

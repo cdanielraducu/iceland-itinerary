@@ -1,0 +1,60 @@
+{
+  "locations": {
+    "gullfoss": {
+      "name": "Gullfoss Waterfall",
+      "url": "https://images.unsplash.com/photo-1539593395743-7da5ee10ff07?w=800&h=600&fit=crop",
+      "alt": "Gullfoss waterfall with golden light"
+    },
+    "geysir": {
+      "name": "Geysir",
+      "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "alt": "Geysir erupting with steam and hot water"
+    },
+    "thingvellir": {
+      "name": "Thingvellir National Park",
+      "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "alt": "Thingvellir rift valley with clear blue water"
+    },
+    "landmannalaugar": {
+      "name": "Landmannalaugar",
+      "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      "alt": "Colorful rhyolite mountains at Landmannalaugar"
+    },
+    "jokulsarlon": {
+      "name": "Jökulsárlón Glacier Lagoon",
+      "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+      "alt": "Icebergs floating in Jökulsárlón lagoon"
+    },
+    "diamond_beach": {
+      "name": "Diamond Beach",
+      "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "alt": "Ice chunks on black sand at Diamond Beach"
+    },
+    "kirkjufellsfoss": {
+      "name": "Kirkjufellsfoss",
+      "url": "https://images.unsplash.com/photo-1539593395743-7da5ee10ff07?w=800&h=600&fit=crop",
+      "alt": "Kirkjufellsfoss waterfall with Kirkjufell mountain"
+    },
+    "dettifoss": {
+      "name": "Dettifoss",
+      "url": "https://images.unsplash.com/photo-1539593395743-7da5ee10ff07?w=800&h=600&fit=crop",
+      "alt": "Powerful Dettifoss waterfall in canyon"
+    },
+    "myvatn": {
+      "name": "Lake Mývatn",
+      "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      "alt": "Lake Mývatn with volcanic formations"
+    },
+    "skogafoss": {
+      "name": "Skógafoss",
+      "url": "https://images.unsplash.com/photo-1539593395743-7da5ee10ff07?w=800&h=600&fit=crop",
+      "alt": "Skógafoss waterfall with rainbow"
+    }
+  },
+  "hero": {
+    "main": {
+      "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop",
+      "alt": "Iceland Ring Road landscape with mountains and aurora"
+    }
+  }
+}

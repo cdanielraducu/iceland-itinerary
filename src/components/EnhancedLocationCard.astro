@@ -1,0 +1,233 @@
+---
+export interface Props {
+  location: {
+    name: string;
+    type: string;
+    time?: string;
+    description: string;
+    image?: string;
+    tips?: string[];
+    pros?: string[];
+    cons?: string[];
+    alternatives?: Array<{
+      name: string;
+      type: string;
+      description: string;
+      pros: string[];
+      cons: string[];
+      drive_time: string;
+      image: string;
+    }>;
+    local_insights?: string[];
+  };
+}
+
+const { location } = Astro.props;
+
+const getLocationIcon = (type: string) => {
+  const icons = {
+    waterfall: '💧',
+    geothermal: '♨️',
+    crater: '🌋',
+    hiking: '🥾',
+    camping: '⛺',
+    glacier: '🧊',
+    mountain: '🏔️',
+    canyon: '🏞️',
+    hot_spring: '♨️',
+    shopping: '🛍️',
+    city: '🏛️',
+    beach: '🏖️',
+    lighthouse: '💡',
+    bridge: '🌉',
+    departure: '✈️',
+    highlands: '🏔️',
+    lake: '🏞️',
+    cave: '🕳️',
+    rock_formation: '🗿',
+    town: '🏘️',
+    landmark: '📍'
+  };
+  return icons[type as keyof typeof icons] || '📍';
+};
+---
+
+<div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-200 hover:border-slate-300">
+  <!-- Main Location Section -->
+  <div class="relative">
+    <!-- Hero Image -->
+    <div class="relative h-56 overflow-hidden">
+      <img 
+        src={location.image || 'https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800&h=600&fit=crop&q=95&auto=format&fm=webp'} 
+        alt={location.name}
+        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+      />
+      
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+      
+      <!-- Type Badge -->
+      <div class="absolute top-4 left-4">
+        <span class="inline-flex items-center space-x-2 bg-white/25 backdrop-blur-sm px-3 py-2 rounded-full text-white text-sm font-medium border border-white/20">
+          <span class="text-lg">{getLocationIcon(location.type)}</span>
+          <span class="capitalize">{location.type.replace('_', ' ')}</span>
+        </span>
+      </div>
+      
+      <!-- Time Badge -->
+      {location.time && (
+        <div class="absolute top-4 right-4">
+          <span class="bg-slate-900/90 backdrop-blur-sm text-white px-3 py-2 rounded-lg text-sm font-mono font-bold">
+            {location.time}
+          </span>
+        </div>
+      )}
+      
+      <!-- Location Title -->
+      <div class="absolute bottom-4 left-4 right-4">
+        <h3 class="text-2xl font-bold text-white mb-2 leading-tight">{location.name}</h3>
+        <p class="text-white/90 text-sm leading-relaxed line-clamp-2">{location.description}</p>
+      </div>
+    </div>
+    
+    <!-- Content Sections -->
+    <div class="p-6 space-y-6">
+      <!-- Pros and Cons Grid -->
+      {(location.pros || location.cons) && (
+        <div class="grid md:grid-cols-2 gap-4">
+          {location.pros && (
+            <div class="bg-emerald-50 rounded-2xl p-4 border border-emerald-200">
+              <h4 class="font-bold text-emerald-800 mb-3 flex items-center">
+                <span class="text-lg mr-2">✅</span>
+                Pros
+              </h4>
+              <ul class="space-y-2">
+                {location.pros.slice(0, 3).map(pro => (
+                  <li class="text-emerald-700 text-sm flex items-start">
+                    <span class="text-emerald-500 mr-2 mt-1">•</span>
+                    <span>{pro}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          
+          {location.cons && (
+            <div class="bg-red-50 rounded-2xl p-4 border border-red-200">
+              <h4 class="font-bold text-red-800 mb-3 flex items-center">
+                <span class="text-lg mr-2">⚠️</span>
+                Cons
+              </h4>
+              <ul class="space-y-2">
+                {location.cons.slice(0, 3).map(con => (
+                  <li class="text-red-700 text-sm flex items-start">
+                    <span class="text-red-500 mr-2 mt-1">•</span>
+                    <span>{con}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+      
+      <!-- Travel Tips -->
+      {location.tips && location.tips.length > 0 && (
+        <div class="bg-blue-50 rounded-2xl p-4 border border-blue-200">
+          <h4 class="font-bold text-blue-800 mb-3 flex items-center">
+            <span class="text-lg mr-2">💡</span>
+            Travel Tips
+          </h4>
+          <ul class="space-y-2">
+            {location.tips.map(tip => (
+              <li class="text-blue-700 text-sm flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">•</span>
+                <span>{tip}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      
+      <!-- Local Insights -->
+      {location.local_insights && location.local_insights.length > 0 && (
+        <div class="bg-purple-50 rounded-2xl p-4 border border-purple-200">
+          <h4 class="font-bold text-purple-800 mb-3 flex items-center">
+            <span class="text-lg mr-2">🏔️</span>
+            Local Insights
+          </h4>
+          <ul class="space-y-2">
+            {location.local_insights.map(insight => (
+              <li class="text-purple-700 text-sm flex items-start">
+                <span class="text-purple-500 mr-2 mt-1">•</span>
+                <span>{insight}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  </div>
+  
+  <!-- Alternatives Section -->
+  {location.alternatives && location.alternatives.length > 0 && (
+    <div class="border-t border-slate-200 bg-slate-50">
+      <div class="p-6">
+        <h4 class="font-bold text-slate-800 mb-4 flex items-center">
+          <span class="text-xl mr-2">🔄</span>
+          Alternative Options
+        </h4>
+        
+        <div class="space-y-4">
+          {location.alternatives.slice(0, 2).map(alt => (
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+              <div class="flex items-start space-x-4">
+                <!-- Alternative Image -->
+                <div class="flex-shrink-0">
+                  <img 
+                    src={alt.image} 
+                    alt={alt.name}
+                    class="w-16 h-16 rounded-xl object-cover"
+                  />
+                </div>
+                
+                <!-- Alternative Content -->
+                <div class="flex-grow min-w-0">
+                  <div class="flex items-center justify-between mb-2">
+                    <h5 class="font-bold text-slate-800 text-sm">{alt.name}</h5>
+                    <span class="bg-slate-100 text-slate-600 px-2 py-1 rounded text-xs">
+                      {alt.drive_time}
+                    </span>
+                  </div>
+                  
+                  <p class="text-slate-600 text-xs mb-3 line-clamp-2">{alt.description}</p>
+                  
+                  <!-- Mini Pros/Cons -->
+                  <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div>
+                      <span class="font-medium text-emerald-600">Pros:</span>
+                      <span class="text-slate-600 ml-1">{alt.pros.slice(0, 2).join(', ')}</span>
+                    </div>
+                    <div>
+                      <span class="font-medium text-red-600">Cons:</span>
+                      <span class="text-slate-600 ml-1">{alt.cons.slice(0, 2).join(', ')}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )}
+</div>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

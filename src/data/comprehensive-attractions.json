@@ -1,0 +1,244 @@
+{
+  "attractions": {
+    "Landmannalaugar": {
+      "name": "Landmannalaugar",
+      "type": "highlands",
+      "description": "Stunning highland destination famous for colorful rhyolite mountains, natural hot springs, and dramatic landscapes.",
+      "tips": [
+        "4x4 vehicle required for F208 road",
+        "Parking reservation needed (9AM-4PM)",
+        "Bring layers - weather changes quickly"
+      ],
+      "image": "https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800&h=600&fit=crop&q=95&auto=format&fm=webp",
+      "pros": [
+        "Iceland's most colorful mountain range",
+        "Natural hot springs for bathing",
+        "Excellent hiking opportunities",
+        "Unique geological formations"
+      ],
+      "cons": [
+        "4x4 vehicle absolutely required",
+        "Parking reservations fill up quickly",
+        "Weather can change rapidly",
+        "F-roads may close without notice"
+      ],
+      "alternatives": [
+        {
+          "name": "Kerlingarfjöll",
+          "type": "highlands",
+          "description": "Dramatic highland area with geothermal activity, colorful mountains, and excellent hiking trails.",
+          "pros": ["Less crowded than Landmannalaugar", "Better facilities", "More hiking options", "Stunning geothermal areas"],
+          "cons": ["Requires 4x4 access", "Higher altitude", "More expensive accommodation"],
+          "drive_time": "2.5 hours from Reykjavik",
+          "image": "https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        },
+        {
+          "name": "Þórsmörk (Thorsmork)",
+          "type": "highlands", 
+          "description": "Valley surrounded by glaciers and mountains, accessible by super jeep with diverse hiking trails.",
+          "pros": ["Protected valley microclimate", "Multiple hiking options", "Dramatic glacier views", "Rich vegetation"],
+          "cons": ["Super jeep tours required", "Expensive to reach", "Weather dependent"],
+          "drive_time": "Super jeep tour required",
+          "image": "https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        }
+      ],
+      "local_insights": [
+        "Book parking online as soon as reservations open",
+        "The hot spring gets very crowded - visit early or late",
+        "Bring waterproof hiking boots for the trails"
+      ]
+    },
+    "Dettifoss": {
+      "name": "Dettifoss",
+      "type": "waterfall",
+      "description": "Europe's most powerful waterfall by volume, with 500 cubic meters of water per second thundering over 45m cliff.",
+      "tips": [
+        "Accessible from both east and west sides",
+        "West side (862) has better views but rougher road",
+        "Extremely loud - you'll feel the power"
+      ],
+      "image": "https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp",
+      "pros": [
+        "Europe's most powerful waterfall",
+        "Incredible raw natural power",
+        "Two different viewing approaches",
+        "Part of Diamond Circle route"
+      ],
+      "cons": [
+        "Road 862 is rough and dusty",
+        "Extremely windy conditions",
+        "Limited facilities",
+        "Spray can damage cameras"
+      ],
+      "alternatives": [
+        {
+          "name": "Selfoss",
+          "type": "waterfall",
+          "description": "Horseshoe-shaped waterfall just upstream from Dettifoss, less crowded with unique curved formation.",
+          "pros": ["Unique horseshoe shape", "Less crowded", "10-minute walk from Dettifoss", "Different photo opportunities"],
+          "cons": ["Smaller than Dettifoss", "Less dramatic", "Same rough road access"],
+          "drive_time": "10-minute walk from Dettifoss",
+          "image": "https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        },
+        {
+          "name": "Goðafoss",
+          "type": "waterfall",
+          "description": "The 'Waterfall of the Gods' with historical significance and horseshoe shape, easily accessible from Ring Road.",
+          "pros": ["Easy Ring Road access", "Historical significance", "Good facilities", "Multiple viewing angles"],
+          "cons": ["Smaller scale", "More crowded", "Less dramatic power"],
+          "drive_time": "1 hour south on Ring Road",
+          "image": "https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        }
+      ],
+      "local_insights": [
+        "East side (864) is easier drive but further walk",
+        "West side gets better afternoon light",
+        "Bring windproof clothing - it's incredibly windy"
+      ]
+    },
+    "Kirkjufellsfoss": {
+      "name": "Kirkjufellsfoss",
+      "type": "waterfall",
+      "description": "Picturesque waterfall with iconic Kirkjufell mountain backdrop - one of the most photographed locations in Iceland.",
+      "tips": [
+        "Perfect for Northern Lights photography",
+        "Multiple viewpoints along the path",
+        "Popular sunrise/sunset location"
+      ],
+      "image": "https://images.unsplash.com/photo-1578910715199-c3e67b41e943?w=800&h=600&fit=crop&q=95&auto=format&fm=webp",
+      "pros": [
+        "Most photographed mountain in Iceland",
+        "Perfect Northern Lights foreground",
+        "Easy access and parking",
+        "Multiple composition angles"
+      ],
+      "cons": [
+        "Extremely crowded photo spot",
+        "Challenging to get 'original' shots",
+        "Weather often limits visibility",
+        "Northern Lights viewing weather dependent"
+      ],
+      "alternatives": [
+        {
+          "name": "Vestrahorn (Stokksnes)",
+          "type": "mountain",
+          "description": "Dramatic Batman-shaped mountain with black sand dunes and Vikings village film set.",
+          "pros": ["Dramatic black sand setting", "Vikings village props", "Less crowded", "Unique mountain shape"],
+          "cons": ["Entry fee required", "East Iceland location", "Weather dependent photography"],
+          "drive_time": "Eastern Iceland (Ring Road)",
+          "image": "https://images.unsplash.com/photo-1578910715199-c3e67b41e943?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        },
+        {
+          "name": "Búðir Church & Snæfellsjökull",
+          "type": "landmark",
+          "description": "Iconic black church with glacier-capped Snæfellsjökull volcano backdrop on Snæfellsnes Peninsula.",
+          "pros": ["Iconic black church", "Glacier volcano backdrop", "Less crowded", "Mystical atmosphere"],
+          "cons": ["Smaller scale", "Weather dependent glacier views", "Less dramatic landscape"],
+          "drive_time": "30 minutes from Kirkjufell",
+          "image": "https://images.unsplash.com/photo-1578910715199-c3e67b41e943?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        }
+      ],
+      "local_insights": [
+        "The classic tripod spots are always occupied during peak hours",
+        "Early morning (5-7 AM) is best for photography",
+        "Northern Lights season is September to March"
+      ]
+    },
+    "Ásbyrgi Canyon": {
+      "name": "Ásbyrgi Canyon",
+      "type": "canyon",
+      "description": "Horseshoe-shaped canyon formed by glacial flooding, creating a sheltered oasis with unique ecosystem.",
+      "tips": [
+        "Several hiking trails of varying difficulty",
+        "Rich birdlife and vegetation",
+        "Nordic mythology connects it to Odin's horse"
+      ],
+      "image": "https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp",
+      "pros": [
+        "Unique horseshoe-shaped canyon",
+        "Rich wildlife and vegetation",
+        "Multiple hiking trail options",
+        "Sheltered from wind"
+      ],
+      "cons": [
+        "Limited facilities",
+        "Requires decent walking",
+        "Can be muddy after rain",
+        "Weather dependent visibility"
+      ],
+      "alternatives": [
+        {
+          "name": "Fjaðrárgljúfur Canyon",
+          "type": "canyon",
+          "description": "Dramatic serpentine canyon with winding river, famous for its appearance in Justin Bieber music video.",
+          "pros": ["Dramatic serpentine shape", "Easy access from Ring Road", "Great photography", "Multiple viewpoints"],
+          "cons": ["Very crowded since Justin Bieber video", "Can be closed to protect vegetation", "Limited parking"],
+          "drive_time": "South coast location",
+          "image": "https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        },
+        {
+          "name": "Kolugljúfur Canyon",
+          "type": "canyon",
+          "description": "Hidden canyon with multiple waterfalls and viewing platforms, off the beaten path treasure.",
+          "pros": ["Multiple waterfalls in one canyon", "Less crowded", "Good viewing platforms", "Easy Ring Road access"],
+          "cons": ["Less dramatic than other canyons", "Shorter hiking options", "Limited facilities"],
+          "drive_time": "Northern Ring Road",
+          "image": "https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        }
+      ],
+      "local_insights": [
+        "The legend says it's a hoofprint from Odin's eight-legged horse Sleipnir",
+        "Best viewpoint is from the cliff rim trail",
+        "Surprisingly sheltered climate supports birch trees"
+      ]
+    },
+    "Hvítserkur": {
+      "name": "Hvítserkur",
+      "type": "rock_formation",
+      "description": "15-meter tall basalt rock formation rising from the sea, resembling a drinking elephant or dragon.",
+      "tips": [
+        "Best photography at sunset",
+        "Seals often spotted in the area",
+        "Access via short gravel road"
+      ],
+      "image": "https://images.unsplash.com/photo-1578910715199-c3e67b41e943?w=800&h=600&fit=crop&q=95&auto=format&fm=webp",
+      "pros": [
+        "Unique elephant-shaped sea stack",
+        "Great for sunset photography",
+        "Seal watching opportunities",
+        "Free to visit with easy access"
+      ],
+      "cons": [
+        "Weather dependent visibility",
+        "Limited facilities",
+        "Can be very windy",
+        "Gravel road access"
+      ],
+      "alternatives": [
+        {
+          "name": "Lóndrangar Cliffs",
+          "type": "rock_formation",
+          "description": "Twin basalt pillars on Snæfellsnes Peninsula with dramatic coastal setting and birdlife.",
+          "pros": ["Twin formation", "Dramatic coastal setting", "Rich birdlife", "Multiple viewing angles"],
+          "cons": ["Smaller than Hvítserkur", "More crowded", "Weather dependent access"],
+          "drive_time": "Snæfellsnes Peninsula",
+          "image": "https://images.unsplash.com/photo-1578910715199-c3e67b41e943?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        },
+        {
+          "name": "Dyrhólaey Arch",
+          "type": "rock_formation",
+          "description": "Massive natural arch on the South Coast with black sand beaches and puffin viewing.",
+          "pros": ["Massive natural arch", "Black sand beaches", "Puffin viewing (summer)", "Dramatic waves"],
+          "cons": ["Very windy", "Crowded parking", "Can be closed during nesting season"],
+          "drive_time": "South coast location",
+          "image": "https://images.unsplash.com/photo-1578910715199-c3e67b41e943?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        }
+      ],
+      "local_insights": [
+        "The name means 'white shirt' due to bird droppings",
+        "Legend says it's a troll that was caught by sunrise",
+        "Best seal spotting is during low tide"
+      ]
+    }
+  }
+}

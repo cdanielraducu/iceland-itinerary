@@ -9,7 +9,44 @@
         "Wear waterproof clothing - gets very misty",
         "Visit during golden hour for magical lighting"
       ],
-      "image": "https://images.unsplash.com/photo-1539593395743-7da5ee10ff07?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+      "image": "https://images.unsplash.com/photo-1539593395743-7da5ee10ff07?w=800&h=600&fit=crop&q=95&auto=format&fm=webp",
+      "pros": [
+        "Iceland's most iconic waterfall",
+        "Easy accessibility from parking",
+        "Multiple viewing platforms",
+        "Great photo opportunities with rainbows"
+      ],
+      "cons": [
+        "Very crowded, especially in summer",
+        "Can get extremely misty and wet",
+        "Limited parking during peak times",
+        "Tour buses create congestion"
+      ],
+      "alternatives": [
+        {
+          "name": "Háifoss",
+          "type": "waterfall",
+          "description": "Iceland's fourth highest waterfall at 122m, much less crowded with spectacular highland views.",
+          "pros": ["Taller than Gullfoss", "Far fewer crowds", "Beautiful highland scenery", "Free to visit"],
+          "cons": ["Longer drive on rough road", "Less facilities", "Weather dependent access"],
+          "drive_time": "45 minutes from Golden Circle",
+          "image": "https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        },
+        {
+          "name": "Aldeyjarfoss",
+          "type": "waterfall",
+          "description": "Stunning waterfall surrounded by unique basalt columns, creating a dramatic amphitheater effect.",
+          "pros": ["Unique basalt column formations", "Excellent photography", "Peaceful atmosphere", "Instagram-worthy backdrop"],
+          "cons": ["Long drive from Golden Circle", "Rough F-road access", "4WD recommended"],
+          "drive_time": "2.5 hours from Reykjavik",
+          "image": "https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        }
+      ],
+      "local_insights": [
+        "Visit early morning (before 9 AM) to avoid tour buses",
+        "The lower viewpoint gets you closer but much wetter",
+        "Local photographers recommend sunset for golden light on the water"
+      ]
     },
     "Geysir": {
       "name": "Geysir",
@@ -20,7 +57,44 @@
         "Stand upwind to avoid sulfur smell",
         "Wait for multiple eruptions for best photos"
       ],
-      "image": "https://images.unsplash.com/photo-1561979321-dcad5fa8b4bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+      "image": "https://images.unsplash.com/photo-1561979321-dcad5fa8b4bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp",
+      "pros": [
+        "Reliable eruptions every 5-10 minutes",
+        "Historic significance - original geyser",
+        "Good facilities and parking",
+        "Part of classic Golden Circle route"
+      ],
+      "cons": [
+        "Very crowded with tour groups",
+        "Strong sulfur smell throughout area",
+        "Expensive on-site facilities",
+        "Limited viewing angles due to crowds"
+      ],
+      "alternatives": [
+        {
+          "name": "Hverir Geothermal Area",
+          "type": "geothermal",
+          "description": "Dramatic lunar-like landscape with boiling mud pools, steaming vents, and colorful mineral deposits near Lake Mývatn.",
+          "pros": ["More diverse geothermal features", "Otherworldly landscape", "Better for photography", "Less crowded than Geysir"],
+          "cons": ["Northern Iceland location", "Strong sulfur odor", "Stay on marked paths", "Weather dependent"],
+          "drive_time": "Part of northern Iceland itinerary",
+          "image": "https://images.unsplash.com/photo-1561979321-dcad5fa8b4bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        },
+        {
+          "name": "Gunnuhver Hot Springs",
+          "type": "geothermal",
+          "description": "Powerful geothermal area on Reykjanes Peninsula with massive steam vents and colorful mineral formations.",
+          "pros": ["Near Keflavik Airport", "Dramatic coastal setting", "Free to visit", "Good for arrival/departure day"],
+          "cons": ["Windy conditions common", "Less predictable activity", "Smaller than Geysir area"],
+          "drive_time": "15 minutes from Keflavik Airport",
+          "image": "https://images.unsplash.com/photo-1561979321-dcad5fa8b4bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        }
+      ],
+      "local_insights": [
+        "The original Geysir rarely erupts now - focus on Strokkur",
+        "Best photos from the hill behind the main viewing area",
+        "Visitor center has good coffee but overpriced meals"
+      ]
     },
     "Bruarfoss": {
       "name": "Bruarfoss",
@@ -31,7 +105,44 @@
         "Follow the river upstream",
         "Most beautiful waterfall in Iceland according to many"
       ],
-      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&q=95&auto=format&fm=webp",
+      "pros": [
+        "Incredibly vibrant blue water",
+        "Instagram-famous hidden gem",
+        "Peaceful hike through beautiful landscape",
+        "Less crowded than main Golden Circle stops"
+      ],
+      "cons": [
+        "Requires 2km hike each way",
+        "Can be muddy and slippery",
+        "Weather dependent visibility",
+        "No facilities at trailhead"
+      ],
+      "alternatives": [
+        {
+          "name": "Faxi Waterfall",
+          "type": "waterfall",
+          "description": "Charming smaller waterfall with salmon ladder, easily accessible and perfect for a peaceful stop.",
+          "pros": ["Easy access from parking", "Fish ladder viewing", "Picnic areas", "Family-friendly"],
+          "cons": ["Smaller scale", "Less dramatic", "Can be crowded in summer"],
+          "drive_time": "10 minutes from Golden Circle",
+          "image": "https://images.unsplash.com/photo-1578910901346-5d8bf2b05d04?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        },
+        {
+          "name": "Gljufrabui (Hidden Waterfall)",
+          "type": "waterfall",
+          "description": "Secret waterfall hidden behind Seljalandsfoss, accessible through a narrow canyon entrance.",
+          "pros": ["Truly hidden experience", "Adventure to reach it", "Unique canyon setting", "Great photography"],
+          "cons": ["Can get very wet", "Narrow entrance", "Southern coast location", "Requires good weather"],
+          "drive_time": "2.5 hours from Golden Circle",
+          "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        }
+      ],
+      "local_insights": [
+        "The hike is easy but wear waterproof shoes",
+        "Best light for photos is mid-morning",
+        "Local photographers call this 'Blue Waterfall'"
+      ]
     },
     "Kerið": {
       "name": "Kerið Crater",
@@ -75,7 +186,44 @@
         "Boat tours available for closer iceberg experience", 
         "Best light for photography in early morning/evening"
       ],
-      "image": "https://images.unsplash.com/photo-1578911373434-0cb395d2cbfb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+      "image": "https://images.unsplash.com/photo-1578911373434-0cb395d2cbfb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp",
+      "pros": [
+        "Iceland's most famous glacier lagoon",
+        "Constantly changing iceberg formations",
+        "Boat tours available",
+        "Easy access and good facilities"
+      ],
+      "cons": [
+        "Extremely crowded parking",
+        "Expensive boat tours",
+        "Weather dependent visibility",
+        "Tour buses dominate best viewing spots"
+      ],
+      "alternatives": [
+        {
+          "name": "Fjallsárlón",
+          "type": "glacier",
+          "description": "Jökulsárlón's 'little sister' - smaller glacier lagoon with equally stunning icebergs and much fewer crowds.",
+          "pros": ["Much less crowded", "Boat tours available", "Closer glacier views", "Better photo opportunities"],
+          "cons": ["Smaller lagoon", "Fewer facilities", "Less dramatic scale"],
+          "drive_time": "10 minutes from Jökulsárlón",
+          "image": "https://images.unsplash.com/photo-1578911373434-0cb395d2cbfb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        },
+        {
+          "name": "Sólheimajökull Glacier",
+          "type": "glacier",
+          "description": "Accessible glacier outlet where you can walk right up to the ice and see glacier formations up close.",
+          "pros": ["Walk directly to glacier", "Glacier hiking tours", "Dramatic ice formations", "Good for glacier education"],
+          "cons": ["Glacier retreating rapidly", "Can be dangerous without guide", "Weather dependent access"],
+          "drive_time": "4 hours west of Jökulsárlón",
+          "image": "https://images.unsplash.com/photo-1578911373434-0cb395d2cbfb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        }
+      ],
+      "local_insights": [
+        "Arrive early morning to avoid tour buses",
+        "The lagoon is deepest glacier lagoon in Iceland",
+        "Zodiac boat tours get closer to icebergs than larger boats"
+      ]
     },
     "Diamond Beach": {
       "name": "Diamond Beach",
@@ -130,7 +278,53 @@
         "Expensive but iconic experience",
         "Free silica mud mask included"
       ],
-      "image": "https://images.unsplash.com/photo-1578679625853-52c4c8cf90bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+      "image": "https://images.unsplash.com/photo-1578679625853-52c4c8cf90bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp",
+      "pros": [
+        "World-famous iconic experience",
+        "Luxury spa facilities",
+        "Unique milky blue water",
+        "Professional photography services"
+      ],
+      "cons": [
+        "Extremely expensive ($50-100+ per person)",
+        "Very crowded and commercialized",
+        "Advance booking required months ahead",
+        "Not a natural hot spring"
+      ],
+      "alternatives": [
+        {
+          "name": "Reykjadalur Hot Springs",
+          "type": "hot_spring",
+          "description": "Natural geothermal river where you can bathe for free after a scenic 3km hike through steaming valleys.",
+          "pros": ["Completely free", "Natural hot spring", "Beautiful hike", "Authentic experience"],
+          "cons": ["3km hike required", "Weather dependent", "No facilities", "Can be muddy"],
+          "drive_time": "45 minutes from Reykjavik",
+          "image": "https://images.unsplash.com/photo-1578679625853-52c4c8cf90bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        },
+        {
+          "name": "Mývatn Nature Baths",
+          "type": "hot_spring",
+          "description": "Less crowded geothermal baths in North Iceland with views of volcanic landscapes and Lake Mývatn.",
+          "pros": ["Much less crowded", "More affordable", "Volcanic mountain views", "More authentic feel"],
+          "cons": ["Northern Iceland location", "Smaller than Blue Lagoon", "Fewer luxury amenities"],
+          "drive_time": "Part of northern Ring Road itinerary",
+          "image": "https://images.unsplash.com/photo-1578679625853-52c4c8cf90bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        },
+        {
+          "name": "Seljavallalaug Pool",
+          "type": "hot_spring",
+          "description": "Historic outdoor geothermal pool built in 1923, hidden between mountains with authentic Icelandic bathing culture.",
+          "pros": ["Historic significance", "Dramatic mountain setting", "Free to use", "No crowds"],
+          "cons": ["20-minute hike required", "Basic facilities", "Weather dependent", "Can be quite cold"],
+          "drive_time": "2 hours from Reykjavik",
+          "image": "https://images.unsplash.com/photo-1578679625853-52c4c8cf90bb?w=800&h=600&fit=crop&q=95&auto=format&fm=webp"
+        }
+      ],
+      "local_insights": [
+        "Locals prefer the natural hot springs over Blue Lagoon",
+        "Book the cheapest package - extras aren't worth it",
+        "Better to visit on departure day if doing Ring Road"
+      ]
     }
   }
 }

@@ -1,6 +1,7 @@
 ---
-import LocationCard from './LocationCard.astro';
+import EnhancedLocationCard from './EnhancedLocationCard.astro';
 import locationsData from '../data/locations.json';
+import comprehensiveData from '../data/comprehensive-attractions.json';
 
 export interface Props {
   day: {
@@ -137,18 +138,25 @@ const getDayColor = (dayNum: number) => {
       </h4>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {day.highlights.slice(0, 6).map(highlight => {
-          const locationData = locationsData.attractions[highlight as keyof typeof locationsData.attractions];
+          // Try comprehensive data first, then fall back to original data
+          let locationData = comprehensiveData.attractions[highlight as keyof typeof comprehensiveData.attractions] || 
+                           locationsData.attractions[highlight as keyof typeof locationsData.attractions];
+          
           if (locationData) {
             const scheduleItem = day.schedule.find(item => item.activity.toLowerCase().includes(highlight.toLowerCase()));
             return (
-              <LocationCard 
+              <EnhancedLocationCard 
                 location={{
                   name: locationData.name,
                   type: locationData.type,
                   time: scheduleItem?.time,
                   description: locationData.description,
                   tips: locationData.tips,
-                  image: locationData.image
+                  image: locationData.image,
+                  pros: locationData.pros,
+                  cons: locationData.cons,
+                  alternatives: locationData.alternatives,
+                  local_insights: locationData.local_insights
                 }} 
               />
             );
@@ -158,11 +166,17 @@ const getDayColor = (dayNum: number) => {
       </div>
       
       <!-- Additional Highlights (for locations not in detailed data) -->
-      {day.highlights.filter(highlight => !locationsData.attractions[highlight as keyof typeof locationsData.attractions]).length > 0 && (
+      {day.highlights.filter(highlight => 
+        !comprehensiveData.attractions[highlight as keyof typeof comprehensiveData.attractions] && 
+        !locationsData.attractions[highlight as keyof typeof locationsData.attractions]
+      ).length > 0 && (
         <div class="mt-6">
           <h5 class="text-lg font-semibold text-slate-700 mb-4">Also Visiting:</h5>
           <div class="flex flex-wrap gap-3">
-            {day.highlights.filter(highlight => !locationsData.attractions[highlight as keyof typeof locationsData.attractions]).map(highlight => (
+            {day.highlights.filter(highlight => 
+              !comprehensiveData.attractions[highlight as keyof typeof comprehensiveData.attractions] && 
+              !locationsData.attractions[highlight as keyof typeof locationsData.attractions]
+            ).map(highlight => (
               <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl px-4 py-3 text-center hover:from-blue-100 hover:to-indigo-100 transition-colors duration-300">
                 <span class="text-blue-700 font-medium text-sm">{highlight}</span>
               </div>
